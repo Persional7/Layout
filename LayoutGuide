@@ -1,0 +1,11 @@
+.LinearLayout
+..layout_weight
+
+LINEATLAYOUT
+线性布局
+layout_weight
+权重属性，通过设置改属性能够按比例对view进行布局。
+1、child view 属性为match_parent时，layout_weight属性值越小其所对应的size越大。
+2、child View 属性值为wrap_content时，layout_weight属性值越大其所对应的size越大。
+3、混合布局（child view 部分设置layout_weight），首先计算出不包含该属性的view，之后按照对应方式计算剩余view的大小。
+带权重的view size计算方式为：view本身L(W) = 本身L(W) + 剩余空间L(W)*自身weight/总weight；
