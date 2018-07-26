@@ -9,3 +9,13 @@ layout_weight
 2、child View 属性值为wrap_content时，layout_weight属性值越大其所对应的size越大。
 3、混合布局（child view 部分设置layout_weight），首先计算出不包含该属性的view，之后按照对应方式计算剩余view的大小。
 带权重的view size计算方式为：view本身L(W) = 本身L(W) + 剩余空间L(W)*自身weight/总weight；
+
+2、LinearLayout 内部类LinearLayout.LayoutParams
+   该内部类独有的参数有layout_weight和layout_gravity，其他的参数继承自ViewGroup.MarginLayoutParams 和ViewGroup.LayoutParams
+   ViewGroup.LayoutParams 包含layout的weight和height属性
+   ViewGroup.MarginLayoutParams 包含layout的margin属性
+   
+   综合以上这些属性，LinearLayout.LayoutParams用于设置布局相关的属性：高宽、边界、内部view的位置。
+   
+
+
